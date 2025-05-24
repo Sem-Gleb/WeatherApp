@@ -77,7 +77,7 @@ const StyledWrapper = styled.div`
     width: 4.375em;
     height: 4.375em;
     margin-top: 20px;
-    margin-left: 110px;
+    margin-left: 140px;
   }
 
   .pl__arrows,

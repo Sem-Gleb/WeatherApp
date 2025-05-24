@@ -1,0 +1,18 @@
+@import './variables';
+@import './mixins';
+
+$primary: #c8dcff;
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: $light-bg;
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

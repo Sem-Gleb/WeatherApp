@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/weatherCard.scss";
 
 type WeatherProps = {
   city: string;
@@ -38,47 +39,29 @@ const WeatherCard: React.FC<WeatherProps> = ({
     });
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white rounded-2xl shadow-xl p-6">
-      <div className="flex flex-col items-center">
+    <div className="weather-card">
+      <div className="main">
         <img
           src={`https://openweathermap.org/img/wn/${icon}@4x.png`}
           alt={description}
-          className="w-24 h-24"
+          className="icon"
         />
-        <h1 className="text-5xl font-bold">{Math.round(temp)}°</h1>
-        <p className="text-xl capitalize">{description}</p>
+        <h1 className="temp">{Math.round(temp)}°</h1>
+        <p className="desc">{description}</p>
       </div>
 
-      <div className="text-center mt-4">
-        <h2 className="text-2xl font-semibold">{city}</h2>
-        <p className="text-sm">{formattedDate}</p>
+      <div className="meta">
+        <h2 className="city">{city}</h2>
+        <p className="date">{formattedDate}</p>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mt-6 text-sm">
-        <div>
-          <p className="text-zinc-500">Ощущается как:</p>
-          <p>{Math.round(feelsLike)}°</p>
-        </div>
-        <div>
-          <p className="text-zinc-500">Влажность:</p>
-          <p>{humidity}%</p>
-        </div>
-        <div>
-          <p className="text-zinc-500">Ветер:</p>
-          <p>{wind} м/с</p>
-        </div>
-        <div>
-          <p className="text-zinc-500">Давление:</p>
-          <p>{pressure} гПа</p>
-        </div>
-        <div>
-          <p className="text-zinc-500">Восход:</p>
-          <p>{formatTime(sunrise)}</p>
-        </div>
-        <div>
-          <p className="text-zinc-500 ">Закат:</p>
-          <p>{formatTime(sunset)}</p>
-        </div>
+      <div className="info">
+        <div><span>Ощущается как:</span><p>{Math.round(feelsLike)}°</p></div>
+        <div><span>Влажность:</span><p>{humidity}%</p></div>
+        <div><span>Ветер:</span><p>{wind} м/с</p></div>
+        <div><span>Давление:</span><p>{pressure} гПа</p></div>
+        <div><span>Восход:</span><p>{formatTime(sunrise)}</p></div>
+        <div><span>Закат:</span><p>{formatTime(sunset)}</p></div>
       </div>
     </div>
   );

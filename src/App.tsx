@@ -3,9 +3,10 @@ import WeatherScreen from './components/WeatherScreen'
 
 function App() {
   return (
-    <div className="min-h-screen bg-blue-50 flex items-center justify-center">
+    <div className="app-container">
       <WeatherScreen />
     </div>
+
   )
 }
 export default App
