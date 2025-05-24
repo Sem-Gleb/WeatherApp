@@ -1,8 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState } from 'react'
 import WeatherScreen from './components/WeatherScreen'
-import DefaultWeather from './components/DefaultWeather'
-import WeatherCard from './components/WeatherCard'
 
 function App() {
   return (

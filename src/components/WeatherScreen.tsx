@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import React from "react";
+
 import { useState } from "react";
 import axios from "axios";
 import Loader from "./Load";
